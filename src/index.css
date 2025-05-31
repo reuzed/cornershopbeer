@@ -1,0 +1,131 @@
+@import "tailwindcss";
+/* Integral Font Family */
+@font-face {
+  font-family: "Integral";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/integral.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/integral_i.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/integral_m.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/integral_mi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/integral_b.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/integral_bi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/integral_xb.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/integral_xbi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/integral_db.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/integral_dbi.otf") format("opentype");
+}
+
+/* Special Integral variants - if these are different styles */
+@font-face {
+  font-family: "Integral Heavy";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/integral_bh.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Integral Heavy";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/integral_hi.otf") format("opentype");
+}
+
+/* Momcake Font Family */
+@font-face {
+  font-family: "Momcake";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/fonts/momcake_thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Momcake";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/momcake_bold.otf") format("opentype");
+}
+
+/* Prayer Font */
+@font-face {
+  font-family: "Prayer";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/prayer.ttf") format("truetype");
+}
+/* Tailwind @theme configuration */
+@theme {
+  --font-integral: "Integral", "sans-serif";
+  --font-integral-heavy: "Integral Heavy", "sans-serif";
+  --font-momcake: "Momcake", "sans-serif";
+  --font-prayer: "Prayer", "serif";
+}
