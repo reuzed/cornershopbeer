@@ -1,6 +1,5 @@
 import "./App.css";
 import beer from "../assets/overhead_beers.jpg";
-import ImageScroll from "../components/ImageScroll";
 import BinaryMenu from "../components/BinaryMenu";
 
 function Home() {
