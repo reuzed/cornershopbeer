@@ -15,23 +15,28 @@ import BeersAdd from "./pages/BeersAdd";
 import BeersReview from "./pages/BeersReview";
 import ShopsAdd from "./pages/ShopsAdd";
 import ShopsInventory from "./pages/ShopsInventory";
+import BeerDetail from "./pages/BeerDetails";
+import { BeerProvider } from "./context/beerContext";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/beers-menu" element={<BeersMenu />} />
-        <Route path="/beers" element={<Beers />} />
-        <Route path="/beers-add-menu" element={<BeersAddMenu />} />
-        <Route path="/beers-new" element={<BeersAdd />} />
-        <Route path="/beers-review" element={<BeersReview />} />
-        <Route path="/shops-menu" element={<ShopsMenu />} />
-        <Route path="/shops" element={<Shops />} />
-        <Route path="/shops-add-menu" element={<ShopsAddMenu />} />
-        <Route path="/shops-new" element={<ShopsAdd />} />
-        <Route path="/shops-inventory" element={<ShopsInventory />} />
-      </Routes>
-    </BrowserRouter>
+    <BeerProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/beers-menu" element={<BeersMenu />} />
+          <Route path="/beers" element={<Beers />} />
+          <Route path="/beers/:id" element={<BeerDetail />} />
+          <Route path="/beers-add-menu" element={<BeersAddMenu />} />
+          <Route path="/beers-new" element={<BeersAdd />} />
+          <Route path="/beers-review" element={<BeersReview />} />
+          <Route path="/shops-menu" element={<ShopsMenu />} />
+          <Route path="/shops" element={<Shops />} />
+          <Route path="/shops-add-menu" element={<ShopsAddMenu />} />
+          <Route path="/shops-new" element={<ShopsAdd />} />
+          <Route path="/shops-inventory" element={<ShopsInventory />} />
+        </Routes>
+      </BrowserRouter>
+    </BeerProvider>
   </StrictMode>
 );
