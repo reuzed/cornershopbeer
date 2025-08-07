@@ -5,8 +5,8 @@ export default function ShopsAddMenu() {
     <BinaryMenu
       leftLink="/shops-inventory"
       rightLink="/shops-new"
-      leftTitle="view"
-      rightTitle="add"
+      leftTitle="inventory"
+      rightTitle="shop"
       leftColor="#EC4899"
       rightColor="#EF4444"
       leftTextColor="#F9FAFB"

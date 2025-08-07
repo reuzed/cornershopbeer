@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import type { Shop } from "../types/Shop";
 import LoadingGrid from "../components/LoadingGrid";
+import ShopCard from "../components/ShopCard";
 
 export default function Shops() {
   const navigate = useNavigate();
@@ -88,17 +89,7 @@ export default function Shops() {
       <main className="px-6 pb-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {shops.map((shop) => (
-            <a
-              key={shop.id}
-              href={shop.maps_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group cursor-pointer relative overflow-hidden bg-white aspect-square hover:scale-105 transition-transform duration-200 flex items-center justify-center"
-            >
-              <h3 className="text-center text-lg font-bold lowercase group-hover:underline px-2">
-                {shop.name}
-              </h3>
-            </a>
+            <ShopCard key={shop.id} shop={shop} />
           ))}
         </div>
       </main>

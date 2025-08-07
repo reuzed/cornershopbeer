@@ -1,7 +1,8 @@
 // types/BeerReview.ts
 export interface BeerReview {
+  beers_id: string;
   favourite: boolean;
-  rating: string; // using string to bind input value easily
+  rating: string;
   description: string;
-  date: string; // ISO date string
+  date: string;
 }

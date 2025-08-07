@@ -59,6 +59,7 @@ export default function BeersReview() {
     setMessage(null);
     try {
       await axios.post(`${import.meta.env.VITE_BASE_URL}/beerreview`, {
+        beers_id: selectedBeer ? parseInt(selectedBeer) : 0,
         favourite,
         rating,
         description,

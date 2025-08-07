@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import type { Shop } from "../types/Shop";
 import { useBeers } from "../context/beerContext";
-import SearchableDropdown, { Option } from "../components/SearchableDropdown";
+import SearchableDropdown from "../components/SearchableDropdown";
+import type { Option } from "../components/SearchableDropdown";
 
 export default function ShopsInventory() {
   const navigate = useNavigate();

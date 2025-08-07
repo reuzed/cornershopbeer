@@ -5,7 +5,9 @@ import axios from "axios";
 export default function ShopsAdd() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
+  const [picLink, setPicLink] = useState("");
   const [mapsLink, setMapsLink] = useState("");
+  const [websiteLink, setWebsiteLink] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
@@ -17,11 +19,15 @@ export default function ShopsAdd() {
       await axios.post(`${import.meta.env.VITE_BASE_URL}/shop`, {
         id: 0,
         name,
+        pic_link: picLink,
         maps_link: mapsLink,
+        website_link: websiteLink,
       });
       setMessage("shop added!");
       setName("");
+      setPicLink("");
       setMapsLink("");
+      setWebsiteLink("");
     } catch (err) {
       console.error(err);
       setMessage("failed to add shop");
@@ -89,8 +95,30 @@ export default function ShopsAdd() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full border px-4 py-2 rounded focus:outline-none"
+              className="w-full border-2 border-gray-900 px-4 py-2 rounded focus:outline-none"
               required
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-sm font-semibold lowercase">
+              picture url
+            </label>
+            <input
+              type="url"
+              value={picLink}
+              onChange={(e) => setPicLink(e.target.value)}
+              className="w-full border-2 border-gray-900 px-4 py-2 rounded focus:outline-none"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-sm font-semibold lowercase">
+              website link
+            </label>
+            <input
+              type="url"
+              value={websiteLink}
+              onChange={(e) => setWebsiteLink(e.target.value)}
+              className="w-full border-2 border-gray-900 px-4 py-2 rounded focus:outline-none"
             />
           </div>
           <div>
@@ -101,7 +129,7 @@ export default function ShopsAdd() {
               type="url"
               value={mapsLink}
               onChange={(e) => setMapsLink(e.target.value)}
-              className="w-full border px-4 py-2 rounded focus:outline-none"
+              className="w-full border-2 border-gray-900 px-4 py-2 rounded focus:outline-none"
             />
           </div>
           <button
