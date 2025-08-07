@@ -122,6 +122,25 @@
   font-display: swap;
   src: url("/fonts/prayer.ttf") format("truetype");
 }
+/* custom slider thumb color */
+input[type="range"].slider-thumb-orange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  background: #db5e00; /* darker orange */
+  cursor: pointer;
+  border: 2px solid white;
+}
+input[type="range"].slider-thumb-orange::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  background: #db5e00;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
 /* Tailwind @theme configuration */
 @theme {
   --font-integral: "Integral", "sans-serif";

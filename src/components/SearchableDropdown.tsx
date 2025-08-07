@@ -49,7 +49,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
           // delay hide to capture click
           setTimeout(() => setShowList(false), 150);
         }}
-        className="w-full px-4 py-2 border rounded focus:outline-none"
+        className="w-full px-4 py-2 border-2 border-gray-900 rounded focus:outline-none"
       />
       {showList && filteredOptions.length > 0 && (
         <ul className="absolute z-10 left-0 right-0 max-h-60 overflow-y-auto bg-white border border-gray-200 shadow-lg">
@@ -58,6 +58,7 @@ const SearchableDropdown: React.FC<SearchableDropdownProps> = ({
               key={o.value}
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer lowercase"
               onMouseDown={() => handleSelect(o.value)}
+              onClick={() => handleSelect(o.value)}
             >
               {o.label}
             </li>
