@@ -33,15 +33,11 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
         className="w-full h-full object-cover"
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-200 flex items-end">
-        <div className="p-3 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-200">
-          <h3 className="text-white font-bold text-lg lowercase">
-            {beer.name}
-          </h3>
-          <p className="text-white text-sm opacity-90 lowercase">
-            {beer.abv}% abv
-          </p>
-        </div>
+      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 p-3 translate-y-full group-hover:translate-y-0 transition-all duration-200">
+        <h3 className="text-white font-bold text-lg lowercase">{beer.name}</h3>
+        <p className="text-white text-sm opacity-90 lowercase">
+          {beer.abv}% abv
+        </p>
       </div>
     </div>
   );
