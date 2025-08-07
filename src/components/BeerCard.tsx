@@ -16,7 +16,7 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
 
   return (
     <div
-      className="group cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+      className="group cursor-pointer relative overflow-hidden bg-white aspect-square hover:scale-105 transition-transform duration-200"
       onClick={handleClick}
       role="button"
       tabIndex={0}
@@ -27,20 +27,21 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
       }}
       aria-label={`View details for ${beer.name}`}
     >
-      <div className="aspect-square overflow-hidden bg-gray-100">
-        <img
-          src={beer.pic_link}
-          alt={beer.name}
-          className="w-full h-full object-cover object-center"
-          loading="lazy"
-        />
-      </div>
-      <div className="p-4 bg-white">
-        <h3 className="text-lg font-bold text-gray-800 truncate">
-          {beer.name}
-        </h3>
-        <p className="text-sm text-gray-600">{beer.brewery}</p>
-        <p className="text-sm font-semibold text-indigo-600">{beer.abv}% ABV</p>
+      <img
+        src={beer.pic_link}
+        alt={beer.name}
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-200 flex items-end">
+        <div className="p-3 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-200">
+          <h3 className="text-white font-bold text-lg lowercase">
+            {beer.name}
+          </h3>
+          <p className="text-white text-sm opacity-90 lowercase">
+            {beer.abv}% abv
+          </p>
+        </div>
       </div>
     </div>
   );
